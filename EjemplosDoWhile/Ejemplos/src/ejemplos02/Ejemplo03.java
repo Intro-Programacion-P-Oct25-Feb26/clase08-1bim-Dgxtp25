@@ -1,7 +1,7 @@
 /*
  Agregar lo correspondiente para que el proceso siguiente permita
  sumar las notas en cada iteración y presentar en la cadena final el
- valor de la suma.
+ valor de la suma. Actividad Hecha ✓
  */
 package ejemplos02;
 
