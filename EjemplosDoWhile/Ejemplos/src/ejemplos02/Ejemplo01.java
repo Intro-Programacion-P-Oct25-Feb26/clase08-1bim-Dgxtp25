@@ -24,13 +24,31 @@ package ejemplos02;
 public class Ejemplo01 {
 
     public static void main(String[] args) {
+
+        String cadenaFinal = "";
         int contador = 1;
         int suma = 0;
-        do {
-        
-            contador = contador + 1;
-        } while (contador <= 10); 
-        System.out.printf("%d\n", suma);
-    }
+        String cadena = "";
 
+        do {
+            suma = suma + contador;
+            cadena = String.format("%s%d\n", cadena, contador);
+            contador = contador + 1;
+        } while (contador <= 10);
+
+        cadenaFinal = String.format("%s\nLa suma es %d\n", cadena, suma);
+        System.out.printf("%s\n", cadenaFinal);
+
+    }
 }
+
+        
+       
+
+        
+    
+}
+
+    
+
+
