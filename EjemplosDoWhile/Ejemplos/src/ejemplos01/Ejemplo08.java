@@ -32,31 +32,22 @@ public class Ejemplo08 {
         String cadena = "";
 
         do {
-            // para manejar el signo asociado
-            //  1 % 2 == 0 // falso
-            //  2 % 2 == 0 // verdadero
-            //  3 % 2 == 0 // falso
+            
             if (denominador % 2 == 0) {
                 signo = "+"; // +
             } else {
                 signo = "-"; // -
             }
-                                        //    -1/1
-                                        // -1/1 +1/2
-                                        // -1/1 +1/2 -1/3 
+         
             cadena = String.format("%s%s%d/%d ", 
                     cadena,
                     signo,
                     numerador, 
                     denominador);
-            denominador = denominador + 1; // 1 + 1 = 2
-                                           // 2 + 1 = 3 
-                                           // 3 + 1 = 4
+            denominador = denominador + 1; 
 
         } while (denominador <= limite); 
-                // 2 <= 10 v
-                // 3 <= 10 v
-                // 4 <= 10 v
+                
         System.out.println(cadena);
 
     }
