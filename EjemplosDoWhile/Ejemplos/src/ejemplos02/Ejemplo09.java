@@ -30,7 +30,7 @@ public class Ejemplo09 {
         int nota;
         int salida;
         String nombre;
-        String evaluacion;  // <-- agregado para Muy buena / Buena
+        String evaluacion;  
         double promedio;
         int suma = 0;
         int contador_calificaciones = 0;
@@ -46,18 +46,18 @@ public class Ejemplo09 {
             System.out.println("Ingrese la nota del estudiante:");
             nota = entrada.nextInt();
 
-            // Determinar si es Muy buena o Buena
+           
             if (nota >= 5) {
                 evaluacion = "Muy buena";
             } else {
                 evaluacion = "Buena";
             }
 
-            // Sumar para promedio
+         
             suma = suma + nota;
             contador_calificaciones++;
 
-            // Agregar línea al reporte
+        
             cadenaFinal = String.format("%sCalificación %d (%s) "
                     + "del estudiante %s\n",
                     cadenaFinal,
@@ -65,10 +65,10 @@ public class Ejemplo09 {
                     evaluacion,
                     nombre);
 
-            System.out.println("Ingrese (-111) si desea salir; "
+            System.out.println("Ingrese (-110) si desea salir; "
                     + "otro número para continuar:");
             salida = entrada.nextInt();
-            entrada.nextLine(); // limpiar buffer
+            entrada.nextLine(); 
 
             if (salida == -111) {
                 bandera = false;
@@ -76,7 +76,7 @@ public class Ejemplo09 {
 
         } while (bandera);
 
-        // Calcular promedio
+        
         promedio = (double) suma / contador_calificaciones;
 
         cadenaFinal = String.format("%s\nPromedio de calificaciones: %.2f",
